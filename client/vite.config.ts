@@ -7,12 +7,13 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   const port = parseInt(env.PORT ?? '3000', 10);
+  const apiUrl = env.API_URL ?? 'http://localhost:3003';
 
   return {
     server: {
-      port: port,
+      port,
       proxy: {
-        '/api': env.API_URL,
+        '/api': apiUrl,
       },
     },
     plugins: [
