@@ -26,3 +26,15 @@ npm run dev
 ```bash
 npm run test
 ```
+
+## Build production bundle
+
+```bash
+npm run build
+```
+
+## Run production server
+
+```bash
+NODE_ENV="production" node ./dist/index.js
+```

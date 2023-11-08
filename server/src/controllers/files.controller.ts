@@ -1,4 +1,4 @@
-import { Handler } from 'express';
+import type { Handler } from 'express';
 
 const upload: Handler = (req, res) => {
   if (!req.file) {

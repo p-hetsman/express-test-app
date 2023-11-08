@@ -1,4 +1,4 @@
-import { ErrorRequestHandler } from 'express';
+import type { ErrorRequestHandler } from 'express';
 
 const error: ErrorRequestHandler = (err, _req, res, _next) => {
   const statusCode = err.statusCode || 500;
